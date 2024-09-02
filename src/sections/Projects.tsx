@@ -34,7 +34,7 @@ export const ProjectsSection = () => {
     <section className="pb-16 lg:py-24">
       <div className="container">
         <div className="flex justify-center">
-          <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-indigo-600 to-sky-600 text-transparent bg-clip-text text-center">
+          <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-indigo-600 to-blue-600 text-transparent bg-clip-text text-center">
             A small selection of my {' '}
           </p>
         </div>

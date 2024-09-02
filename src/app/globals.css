@@ -2,13 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    overflow-x: hidden;
+}
+
 @layer components {
     .nav-item {
         @apply px-4 py-1.5 rounded-full text-black/70 text-sm font-semibold hover:bg-black/10 hover:text-white transition duration-300;
     }
 
     .hero-ring {
-        @apply absolute inset-0 border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-blue-900/5 shadow-[0_0_80px_inset] shadow-blue-900/5;
+        @apply absolute inset-0 border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border-blue-900/5 shadow-[0_0_80px_inset] shadow-blue-900/5;
     }
 
     .star-ring {
