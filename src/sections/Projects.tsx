@@ -4,6 +4,8 @@ import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import Image from "next/image";
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
 import grainImage from '@/assets/images/grain.jpg';
+import { SectionHeader } from "@/components/SectionHeader";
+import { Card } from "@/components/Card";
 
 const portfolioProjects = [
   {
@@ -33,19 +35,10 @@ export const ProjectsSection = () => {
   return (
     <section className="pb-16 lg:py-24">
       <div className="container">
-        <div className="flex justify-center">
-          <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-indigo-600 to-blue-600 text-transparent bg-clip-text text-center">
-            A small selection of my {' '}
-          </p>
-        </div>
-        <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">Recent Projects</h2>
-        <p className="text-center md:text-lg lg:text-xl text-black/60 mt-4 max-w-md mx-auto">A showcase of my recent projects, highlighting innovative solutions and creative design in web development.</p>
+        <SectionHeader eyebrow="A small selection of my " title="Recent Projects" description="A showcase of my recent projects, highlighting innovative solutions and creative design in web development."/>
         <div className="flex flex-col mt-10 md:mt-20 gap-20">
           {portfolioProjects.map(({ id, title, des, image, link }) => (
-            <div key={id} className="bg-gray-200 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:border-2 after:border-black/20 after:rounded-3xl px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 after:pointer-events-none">
-              <div className="absolute inset-0 -z-10 opacity-5" style={{
-                backgroundImage: `url(${grainImage.src})`
-              }}></div>
+            <Card key={id} className="px-8 pb-0 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20">
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
               <h3 className="font-serif text-2xl md:text-4xl">{title}</h3>
@@ -64,7 +57,7 @@ export const ProjectsSection = () => {
               <Image className="mt-8 -mb-4 rounded-2xl md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none" src={image} alt={title} />
               </div>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
       </div>
