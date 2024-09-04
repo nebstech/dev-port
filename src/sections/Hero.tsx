@@ -56,7 +56,9 @@ export const HeroSection = () => {
             alt='Person peeking from behind laptop' 
           />
           <div className='bg-gray-100 border border-slate-500/10 text-black px-4 py-1.5 inline-flex items-center gap-4 rounde-lg'>
-            <div className='bg-green-500 size-2.5 rounded-full'></div>
+            <div className='bg-green-500 size-2.5 rounded-full relative'>
+              <div className='bg-green-500 absolute inset-0 rounded-full animate-ping-large'></div>
+            </div>
             <div className='text-sm font-medium'>Available for new projects</div>
           </div>
         </div>
@@ -65,7 +67,7 @@ export const HeroSection = () => {
             Building Exceptional User Experiences
           </h1>
           <p className='mt-4 text-center text-black/60 md:text-lg'>
-            I specialize in transforming designs into functional, high-performing web applications. Let's discuss your next project.
+            Hello, My name is Adonis Casado. I specialize in transforming designs into functional, high-performing web applications. Let's discuss your next project.
           </p>
         </div>
         <div className='flex flex-col md:flex-row justify-center items-center mt-8 gap-4'>
