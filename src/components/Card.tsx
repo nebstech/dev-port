@@ -5,7 +5,7 @@ import { twMerge } from 'tailwind-merge';
 export const Card = ({ className, children }: PropsWithChildren<{ className?: string }>) => {
   return (
     <div className={twMerge(
-      "bg-gray-200 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:border-2 after:border-black/20 after:rounded-3xl after:pointer-events-none p-6",
+      "bg-gray-200 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:border-2 after:border-black/20 after:rounded-3xl after:pointer-events-none",
       className
     )}>
       <div
