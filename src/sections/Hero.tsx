@@ -1,3 +1,5 @@
+'use client';
+
 import memojiImage from '@/assets/images/memoji-computer.png';
 import Image from 'next/image';
 import ArrowDown from '@/assets/icons/arrow-down.svg';
@@ -7,8 +9,21 @@ import SparkleIcon from '@/assets/icons/sparkle.svg';
 import { HeroOrbit } from '@/components/HeroOrbit';
 
 export const HeroSection = () => {
+  const scrollToSection = () => {
+    const element = document.getElementById('projects');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      console.error('element with id not found')
+    }
+  };
+
+  const openLinkedIn = () => {
+    window.open('https://www.linkedin.com/in/adoniscasado/', '_blank');
+  };
+
   return (
-    <div className='py-32 md:py-48 lg:py-60 z-0 relative z-0 overflow-x-clip'>
+    <div id='home' className='py-32 md:py-48 lg:py-60 z-0 relative z-0 overflow-x-clip'>
       <div className='absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_70%,transparent)]'>
         <div className='absolute inset-0 -z-30 opacity-5' 
           style={{backgroundImage: `url(${grainImage.src})`}}>
@@ -71,11 +86,15 @@ export const HeroSection = () => {
           </p>
         </div>
         <div className='flex flex-col md:flex-row justify-center items-center mt-8 gap-4'>
-          <button className='inline-flex items-center gap-2 border border-black px-6 h-12 rounded-xl'>
+          <button 
+          onClick={scrollToSection}
+          className='inline-flex items-center gap-2 border border-black px-6 h-12 rounded-xl z-20'>
             <span className='font-semibold'>Explore My Work</span>
             <ArrowDown className='size-4'/>
           </button>
-          <button className='inline-flex items-center gap-2 border border-black-300 bg-slate-500 text-white h-12 px-6 rounded-xl'>
+          <button 
+          onClick={openLinkedIn}
+          className='inline-flex items-center gap-2 border border-black-300 bg-slate-500 text-white h-12 px-6 rounded-xl z-20'>
             <span>👋</span>
             <span className='font-semibold'>Let's Connect</span>
           </button>
