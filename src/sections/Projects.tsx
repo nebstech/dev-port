@@ -57,7 +57,7 @@ export const ProjectsSection = () => {
                     <p className="inline-flex gap-2 font-bold uppercase tracking-widest text-sm md:text-base text-black/60">
                       {project.des}
                     </p>
-                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    <a href={project.link}>
                       <button className="bg-white text-gray-950 h-12 w-full md:w-auto rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 md:px-6">
                         <span>View Project</span>
                         <ArrowUpRightIcon className="size-4" />
@@ -70,9 +70,6 @@ export const ProjectsSection = () => {
                     className="mt-8 -mb-4 rounded-2xl md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
                     src={project.image}
                     alt={project.title}
-                    layout="responsive"
-                    width={700}
-                    height={400}
                   />
                 </div>
               </div>
