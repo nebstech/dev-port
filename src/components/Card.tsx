@@ -1,13 +1,19 @@
-import React, { PropsWithChildren } from 'react';
+import React, { ComponentPropsWithoutRef, PropsWithChildren } from 'react';
 import grainImage from '@/assets/images/grain.jpg';
 import { twMerge } from 'tailwind-merge';
 
-export const Card = ({ className, children }: PropsWithChildren<{ className?: string }>) => {
+export const Card = ({ 
+  className, 
+  children,
+  ...other 
+}: ComponentPropsWithoutRef<'div'>) => {
   return (
     <div className={twMerge(
       "bg-gray-200 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:border-2 after:border-black/20 after:rounded-3xl after:pointer-events-none",
       className
-    )}>
+    )}
+    {...other}
+    >
       <div
         className="absolute inset-0 -z-10 opacity-5"
         style={{
