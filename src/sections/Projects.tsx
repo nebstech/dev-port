@@ -25,7 +25,7 @@ const portfolioProjects = [
   {
     id: 3,
     title: "FizziPop",
-    des: "FizziPop",
+    des: "A project i am currently working on.",
     link: "#",
     image: ogImage,
   },
