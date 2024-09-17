@@ -4,30 +4,30 @@ import { SectionHeader } from '@/components/SectionHeader';
 import { Card } from '@/components/Card';
 
 import iPhone15LandingPage from '@/assets/images/iphone15x-landing-page.png';
-import lightSaasLandingPage from '@/assets/images/light-saas-landing-page.png';
-import aiStartupLandingPage from '@/assets/images/ai-startup-landing-page.png';
+import blockForgeLandingPage from '@/assets/images/blockforge-landing-page.png';
+import ogImage from '@/assets/images/OG Image.png';
 
 const portfolioProjects = [
   {
     id: 1,
-    title: "Apple iPhone 15 Page Clone",
-    des: "dark",
-    link: "https://iphone15x.netlify.app",
+    title: "iPhone 15 Page Clone",
+    des: "Check out my iPhone 15 clone built with Next.js, GSAP, and Three.js.",
+    link: "https://iphone15x.netlify.app/",
     image: iPhone15LandingPage,
   },
   {
     id: 2,
-    title: "Light Saas Landing Page",
-    des: "light",
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    title: "Blockchain Blog",
+    des: "Blockforge is a blockchain blog I created using Astro.JS, Tailwind, and Framer Motion.",
+    link: "https://blocforge.netlify.app/",
+    image: blockForgeLandingPage,
   },
   {
     id: 3,
-    title: "AI Startup Landing Page",
-    des: "Ai",
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    title: "FizziPop",
+    des: "FizziPop",
+    link: "#",
+    image: ogImage,
   },
 ];
 
