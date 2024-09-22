@@ -25,8 +25,8 @@ const portfolioProjects = [
   {
     id: 3,
     title: "FizziPop",
-    des: "A project i am currently working on.",
-    link: "#",
+    des: "Animated 3D landing page built using Next.js 14, GSAP, Prismic, Three.js, Tailwind, and TypeScript!",
+    link: "https://fizzipop.netlify.app/",
     image: ogImage,
   },
 ];
